@@ -1,7 +1,7 @@
-/*Hunter Oredson
-CS-2550-001-002-Spring 
-2/19/20 
-*/
+:root {
+  background-color: #000000;
+}
+
 @media all and (max-width: 700px) {
   header h1 img {
     display: none;
@@ -21,32 +21,26 @@ CS-2550-001-002-Spring
   }
 }
 
-:root {
-  max-width: 1080px;
-  background-color: khaki;
-  margin: auto;
-}
-
 body {
-  background-color: white;
-  font-family: Helvetica, sans-serif;
+  background-color: #383535;
+  font-family: "Trebuchet MS", sans-serif;
 }
 
 body.grid-container {
-  color: #595959;
+  color: #ec6969;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 150px auto auto;
-      grid-template-columns: 150px auto auto;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
   -ms-grid-rows: auto auto auto;
       grid-template-rows: auto auto auto;
 }
 
 header {
-  background-color: #EF2B2F;
-  border-bottom: 2px solid black;
+  background-color: #5f3a88;
+  border-bottom: 2px dashed white;
   text-align: center;
-  color: black;
+  color: whitesmoke;
 }
 
 header.grid-item {
@@ -54,7 +48,7 @@ header.grid-item {
   grid-row: 1;
   -ms-grid-column: 1;
       grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 4;
 }
 
 header h1 {
@@ -75,7 +69,7 @@ header h1 {
 
 header img {
   width: 175px;
-  margin: 0px 50px 0px 50px;
+  margin: auto;
 }
 
 menu {
@@ -89,7 +83,7 @@ menu.grid-item {
   -ms-grid-column: 1;
   grid-column: 1;
   grid-column-end: 2;
-  background-color: #CAEBF2;
+  background-color: #383535;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,10 +93,15 @@ menu.grid-item {
           flex-direction: column;
   padding: 0px;
   text-align: center;
-  border-right: 2px solid black;
+  border-right: 2px dashed white;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+menu input {
+  background-color: #5f3a88;
+  color: #cdcadb;
 }
 
 menu input {
@@ -112,11 +111,11 @@ menu input {
 
 menu img {
   width: 150px;
-  padding-top: 30px;
+  margin: auto;
 }
 
 main {
-  background-color: #FFFFFF;
+  background-color: #383535;
   margin: 0;
   padding: 5px 20px;
   max-width: 875px;
@@ -158,7 +157,7 @@ main div#types button {
   border: none;
   margin-bottom: 5px;
   margin-right: 8px;
-  background-color: #FFFFFF;
+  background-color: whitesmoke;
   border-radius: 10px;
   -webkit-transition-duration: 0.1s;
           transition-duration: 0.1s;
@@ -173,7 +172,7 @@ main div#types button#bug {
 }
 
 main div#types button#bug:hover {
-  border-color: black;
+  border-color: #ec6969;
 }
 
 main div#types button#bug:active {
@@ -186,7 +185,7 @@ main div#types button#dark {
 }
 
 main div#types button#dark:hover {
-  border-color: black;
+  border-color: #ec6969;
 }
 
 main div#types button#dark:active {
@@ -199,7 +198,7 @@ main div#types button#dragon {
 }
 
 main div#types button#dragon:hover {
-  border-color: black;
+  border-color: #ec6969;
 }
 
 main div#types button#dragon:active {
@@ -212,7 +211,7 @@ main div#types button#electric {
 }
 
 main div#types button#electric:hover {
-  border-color: black;
+  border-color: #ec6969;
 }
 
 main div#types button#electric:active {
@@ -225,7 +224,7 @@ main div#types button#fairy {
 }
 
 main div#types button#fairy:hover {
-  border-color: black;
+  border-color: #ec6969;
 }
 
 main div#types button#fairy:active {
@@ -238,7 +237,7 @@ main div#types button#fighting {
 }
 
 main div#types button#fighting:hover {
-  border-color: black;
+  border-color: #ec6969;
 }
 
 main div#types button#fighting:active {
@@ -251,7 +250,7 @@ main div#types button#fire {
 }
 
 main div#types button#fire:hover {
-  border-color: black;
+  border-color: #ec6969;
 }
 
 main div#types button#fire:active {
@@ -264,7 +263,7 @@ main div#types button#flying {
 }
 
 main div#types button#flying:hover {
-  border-color: black;
+  border-color: #ec6969;
 }
 
 main div#types button#flying:active {
@@ -277,7 +276,7 @@ main div#types button#ghost {
 }
 
 main div#types button#ghost:hover {
-  border-color: black;
+  border-color: #ec6969;
 }
 
 main div#types button#ghost:active {
@@ -290,7 +289,7 @@ main div#types button#grass {
 }
 
 main div#types button#grass:hover {
-  border-color: black;
+  border-color: #ec6969;
 }
 
 main div#types button#grass:active {
@@ -303,7 +302,7 @@ main div#types button#ground {
 }
 
 main div#types button#ground:hover {
-  border-color: black;
+  border-color: #ec6969;
 }
 
 main div#types button#ground:active {
@@ -316,7 +315,7 @@ main div#types button#ice {
 }
 
 main div#types button#ice:hover {
-  border-color: black;
+  border-color: #ec6969;
 }
 
 main div#types button#ice:active {
@@ -329,7 +328,7 @@ main div#types button#normal {
 }
 
 main div#types button#normal:hover {
-  border-color: black;
+  border-color: #ec6969;
 }
 
 main div#types button#normal:active {
@@ -342,7 +341,7 @@ main div#types button#poison {
 }
 
 main div#types button#poison:hover {
-  border-color: black;
+  border-color: #ec6969;
 }
 
 main div#types button#poison:active {
@@ -355,7 +354,7 @@ main div#types button#psychic {
 }
 
 main div#types button#psychic:hover {
-  border-color: black;
+  border-color: #ec6969;
 }
 
 main div#types button#psychic:active {
@@ -368,7 +367,7 @@ main div#types button#rock {
 }
 
 main div#types button#rock:hover {
-  border-color: black;
+  border-color: #ec6969;
 }
 
 main div#types button#rock:active {
@@ -381,7 +380,7 @@ main div#types button#steel {
 }
 
 main div#types button#steel:hover {
-  border-color: black;
+  border-color: #ec6969;
 }
 
 main div#types button#steel:active {
@@ -394,7 +393,7 @@ main div#types button#water {
 }
 
 main div#types button#water:hover {
-  border-color: black;
+  border-color: #ec6969;
 }
 
 main div#types button#water:active {
@@ -403,9 +402,11 @@ main div#types button#water:active {
 }
 
 footer {
-  border-top: 2px solid black;
+  border-top: 2px dashed white;
   text-align: center;
   font-size: 10pt;
+  background-color: #cdcadb;
+  color: #000000;
 }
 
 footer.grid-item {
@@ -413,7 +414,7 @@ footer.grid-item {
   grid-row: 3;
   -ms-grid-column: 1;
   grid-column: 1;
-  grid-column-end: 3;
+  grid-column-end: 4;
 }
 
 footer p a {
@@ -425,18 +426,18 @@ a {
 }
 
 a:link {
-  color: #595959;
+  color: #ec6969;
 }
 
 a:visited {
-  color: #595959;
+  color: #ec6969;
 }
 
 a:hover {
-  color: #EF2B2F;
+  color: #5f3a88;
 }
 
 a:active {
-  color: #EF2B2F;
+  color: #5f3a88;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=darkTheme.css.map */

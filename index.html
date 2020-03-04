@@ -2,15 +2,19 @@
 <html lang="en">
    <meta charset="UTF-8">
    <title>Pokémon type converter</title>
-   <link rel="stylesheet" href="main.css">
+   <script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>   <link rel="stylesheet" href="main.css">
    <body class="grid-container">
       <header class="grid-item">
-         <h1><img src="images/charizard.jpg" alt="charizard" onclick="curse(this)">
+         <h1><img src="images/charizard.png" alt="charizard" onclick="curse(this)">
          Pokémon type converter
          <img src="images/pikachu.png" alt="pikachu" onclick="curse(this)"></h1>
       </header>
-      <menu class="grid-item">
+      <menu class="grid-item" id="menu">
          <h1>MENU</h1>
+         <p> <a href="index.html">Home Page</a></p>
          <input id="attack" type="button" value="Attacking" onclick="change()"></input>
          <br>
          <input id="defend" type="button" value="Defending" onclick="change()"></input>
@@ -23,7 +27,7 @@
          </select></p>
          <input type="button" onclick="change()" value="Reset"></input>
          <img src="images/gengar.png" alt="gengar" id="gengar">
-         <p> <a href="index.html">Home Page</a></p>
+         
       </menu>
       <main class="grid-item" id="info">
          <h1>Information</h1>
@@ -32,57 +36,61 @@
                <p>This site will calculate which Pokémon type is super effective and not very effective to fight against.</p>
                <br>
                <p>To begin, just click on either the "Attacking" or "Defending" button located on the Menu. If you click "Attacking", this will refer to the type of Pokémon you are attacking, that means it could be multi-valued (two at most). The "Defending" button is for choosing what type of Pokémon you are defending with and will let you know what type of moves to look out for.</p>
+               <p>After you choose the type of Pokémon you are attacking/defending against, the values will show whether the other moves are <strong>super effective</strong> (2x/4x) or <strong>not very effective</strong> (0.5x/0.25x) or <strong>not effetive</strong> at all (0x).</p>
                <p>The "Generation" drop down in the menu will let you choose which generation of Pokémon you are referring to. You will notice that the older generations are missing some types of Pokémon compared to the newest generation.</p>
                <br>
                <p>If you want to know more about Pokémon then you can visit their official website <a href="https://www.pokemon.com/us/">Here</a></p>
             </div>
             <div id="types" style="display: none;">
-               <button  id="bug" type="button" onclick="buttonType(bug)"><img src="images/bug.jpg" alt="bug"> <div id="bug">0</div></button>
-               <button  id="dark" type="button" onclick="buttonType(dark)"><img src="images/dark.jpg" alt="dark"> <div id="dark">0</div></button>
-               <button  id="dragon" type="button" onclick="buttonType(dragon)"><img src="images/dragon.jpg" alt="dragon"> <div id="dragon">0</div></button>     
-               <button  id="electric" type="button" onclick="buttonType(electric)"><img src="images/electric.jpg" alt="electric"> <div id="electric">0</div></button>       
-               <button  id="fairy" type="button" onclick="buttonType(fairy)"><img src="images/fairy.jpg" alt="fairy"> <div id="fairy">0</div></button>   
-               <button  id="fighting" type="button" onclick="buttonType(fighting)"><img src="images/fighting.jpg" alt="fighting"> <div id="fighting">0</div></button>    
-               <button  id="fire" type="button" onclick="buttonType(fire)"><img src="images/fire.jpg" alt="fire"> <div id="fire">0</div></button>
-               <button  id="flying" type="button" onclick="buttonType(flying)"><img src="images/flying.jpg" alt="flying"> <div id="flying">0</div></button>  
-               <button  id="ghost" type="button" onclick="buttonType(ghost)"><img src="images/ghost.jpg" alt="ghost"> <div id="ghost">0</div></button> 
-               <button  id="grass" type="button" onclick="buttonType(grass)"><img src="images/grass.jpg" alt="grass"> <div id="grass">0</div></button> 
-               <button  id="ground" type="button" onclick="buttonType(ground)"><img src="images/ground.jpg" alt="ground"> <div id="ground">0</div></button>   
-               <button  id="ice" type="button" onclick="buttonType(ice)"><img src="images/ice.jpg" alt="ice"> <div id="ice">0</div></button>
-               <button  id="normal" type="button" onclick="buttonType(normal)"><img src="images/normal.jpg" alt="normal"> <div id="normal">0</div></button>    
-               <button  id="poison" type="button" onclick="buttonType(poison)"><img src="images/poison.jpg" alt="poison"> <div id="poison">0</div></button>    
-               <button  id="psychic" type="button" onclick="buttonType(psychic)"><img src="images/psychic.jpg" alt="psychic"> <div id="psychic">0</div></button>   
-               <button  id="rock" type="button" onclick="buttonType(rock)"><img src="images/rock.jpg" alt="rock"> <div id="rock">0</div></button>
-               <button  id="steel" type="button" onclick="buttonType(steel)"><img src="images/steel.jpg" alt="steel"> <div id="steel">0</div></button>
-               <button  id="water" type="button" onclick="buttonType(water)"><img src="images/water.jpg" alt="water"> <div id="water">0</div></button>
+               <button  id="bug" type="button" onclick="buttonType(bug)"><img src="images/bug.png" alt="bug"> <div id="bug">0</div></button>
+               <button  id="dark" type="button" onclick="buttonType(dark)"><img src="images/dark.png" alt="dark"> <div id="dark">0</div></button>
+               <button  id="dragon" type="button" onclick="buttonType(dragon)"><img src="images/dragon.png" alt="dragon"> <div id="dragon">0</div></button>     
+               <button  id="electric" type="button" onclick="buttonType(electric)"><img src="images/electric.png" alt="electric"> <div id="electric">0</div></button>       
+               <button  id="fairy" type="button" onclick="buttonType(fairy)"><img src="images/fairy.png" alt="fairy"> <div id="fairy">0</div></button>   
+               <button  id="fighting" type="button" onclick="buttonType(fighting)"><img src="images/fighting.png" alt="fighting"> <div id="fighting">0</div></button>    
+               <button  id="fire" type="button" onclick="buttonType(fire)"><img src="images/fire.png" alt="fire"> <div id="fire">0</div></button>
+               <button  id="flying" type="button" onclick="buttonType(flying)"><img src="images/flying.png" alt="flying"> <div id="flying">0</div></button>  
+               <button  id="ghost" type="button" onclick="buttonType(ghost)"><img src="images/ghost.png" alt="ghost"> <div id="ghost">0</div></button> 
+               <button  id="grass" type="button" onclick="buttonType(grass)"><img src="images/grass.png" alt="grass"> <div id="grass">0</div></button> 
+               <button  id="ground" type="button" onclick="buttonType(ground)"><img src="images/ground.png" alt="ground"> <div id="ground">0</div></button>   
+               <button  id="ice" type="button" onclick="buttonType(ice)"><img src="images/ice.png" alt="ice"> <div id="ice">0</div></button>
+               <button  id="normal" type="button" onclick="buttonType(normal)"><img src="images/normal.png" alt="normal"> <div id="normal">0</div></button>    
+               <button  id="poison" type="button" onclick="buttonType(poison)"><img src="images/poison.png" alt="poison"> <div id="poison">0</div></button>    
+               <button  id="psychic" type="button" onclick="buttonType(psychic)"><img src="images/psychic.png" alt="psychic"> <div id="psychic">0</div></button>   
+               <button  id="rock" type="button" onclick="buttonType(rock)"><img src="images/rock.png" alt="rock"> <div id="rock">0</div></button>
+               <button  id="steel" type="button" onclick="buttonType(steel)"><img src="images/steel.png" alt="steel"> <div id="steel">0</div></button>
+               <button  id="water" type="button" onclick="buttonType(water)"><img src="images/water.png" alt="water"> <div id="water">0</div></button>
             </div>      
       </main>
       <footer class="grid-item">
          <p>Created by Hunter Oredson</p>
-         <p>All images belong to their original creator, this was made just for fun and as a school project.</p>
+         <p><a onclick="darkTheme()">Dark Theme</a>  <a onclick="mobile()"> Mobile Version</a> </p>
+         <p> All images belong to their original creator, this was made just for fun and as a school project.</p>
       </footer>
    </body>
 
-   <script>
+   <script >
       var startText = document.getElementById("startup"); 
       var main_head = document.getElementById("info");
       var types = document.getElementById("types");
       var button = types.getElementsByTagName("button");
-      var inputs = document.getElementsByTagName("input");
+      let input_attack = document.getElementById("attack");
+      let input_defend = document.getElementById("defend");
       var option = document.getElementsByTagName("option");
       var chosenTypes = [];
       var effectiveness = {bug: 1, dark: 1, dragon: 1, electric: 1, fairy: 1, fighting: 1, fire: 1, flying: 1, ghost: 1, grass: 1, ground: 1, ice: 1, normal: 1, poison: 1, psychic: 1, rock: 1, steel: 1, water: 1};
       
       var gengar = document.getElementById("gengar");
       gengar.addEventListener("mouseover", function() {gengar.style.setProperty("transition", "opacity 5s ease-in-out"); gengar.style.setProperty("opacity", "0");});
-      inputs[0].addEventListener("click", function() {
-         inputs[0].style.setProperty("background-color", "gray");
-         inputs[1].style.setProperty("background-color", "white");
+      input_attack.addEventListener("click", function() {
+         input_attack.style.setProperty("background-color", "gray");
+         input_defend.style.setProperty("background-color", "lightgray");
       });
-      inputs[1].addEventListener("click", function() {
-         inputs[1].style.setProperty("background-color", "gray");
-         inputs[0].style.setProperty("background-color", "white");
+      input_defend.addEventListener("click", function() {
+         input_defend.style.setProperty("background-color", "gray");
+         input_attack.style.setProperty("background-color", "lightgray");
       });
+      
       document.addEventListener("change", function() {
          var dark = document.getElementById("dark");
          var steel = document.getElementById("steel");
@@ -145,7 +153,7 @@
          calculate();
       }
       function calculate() {
-         if (inputs[0].style.backgroundColor == "gray"){
+         if (input_attack.style.backgroundColor == "gray"){
          if (chosenTypes[0] == "bug" | chosenTypes[1] == "bug"){
             effectiveness.flying *= 2; effectiveness.rock *= 2; effectiveness.fire *= 2;
             effectiveness.fighting /= 2; effectiveness.ground /= 2; effectiveness.grass /= 2;
@@ -597,6 +605,24 @@
          else if (image.alt == "pikachu") {
          image.src = "images/cursed_pikachu.png";
          }
+      }
+
+      function darkTheme() {
+         var link = document.getElementsByTagName("link");
+         link[0].href = "darkTheme.css";
+      }
+
+      function mobile() {
+         var link = document.getElementsByTagName("link");
+         link[0].href = "mobile.css";
+         var home = $("menu p a").detach();
+         var inputs = $("menu input").detach();
+         var gen = $("menu p").detach();
+         $("main").append(inputs);
+         $("header").append(gen);
+         $("menu").remove();
+         $("footer p a:eq(1)").after(home);
+         $("footer p a:eq(2)").text("Desktop Version");
       }
    </script>
 </html>

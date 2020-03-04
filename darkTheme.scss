@@ -1,64 +1,58 @@
-/*Hunter Oredson
-CS-2550-001-002-Spring 
-2/19/20 
-*/
-
-    $pokeball-bc: #FFFFFF;
-    $pokeball-tc: #EF2B2F;
-    $font-color: #595959;
-    $bg-color: #CAEBF2;
- 
-@media all and (max-width: 700px) {
-   header {
-      & h1 img {
-         display: none;
-      }
-   }
-}
-
-@media all and (max-width: 960px) {
-   header {
-      & h1 img {
-         width: 145px;
-      }
-   }
-}
-
-@media all and (max-width: 900px) {
-   header {
-      & h1 img {
-         width: 100px;
-         margin: 0px 10px 0px 10px;
-      }
-   }
-}
+$bc-color: #000000;
+$pokeball-bc: #cdcadb;
+$pokeball-tc: #5f3a88;
+$font-color: #ec6969;
+$bg-color: rgb(56, 53, 53);
 
 :root {
-   max-width: 1080px;
-   background-color: khaki;
-   margin: auto;
+    background-color: $bc-color;
 }
 
- body {
-    background-color: white;
-    font-family: Helvetica, sans-serif;
+@media all and (max-width: 700px) {
+    header {
+       & h1 img {
+          display: none;
+       }
+    }
+ }
+ 
+ @media all and (max-width: 960px) {
+    header {
+       & h1 img {
+          width: 145px;
+       }
+    }
+ }
+ 
+ @media all and (max-width: 900px) {
+    header {
+       & h1 img {
+          width: 100px;
+          margin: 0px 10px 0px 10px;
+       }
+    }
+ }
+
+body {
+    background-color: $bg-color;
+    font-family: "Trebuchet MS", sans-serif;
    &.grid-container {
       color: $font-color;
     display: grid;
-    grid-template-columns: 150px auto auto;
+    grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
    }
  }
 
  header {
     background-color: $pokeball-tc;
-    border-bottom: 2px solid black;
+    border-bottom: 2px dashed white;
     text-align: center;
-    color: black;
+    color: whitesmoke;
     &.grid-item {
        grid-row: 1;
       grid-column-start: 1;
-      grid-column-end: 3;
+      grid-column-end: 4;
     }
     & h1 {
       display: flex;
@@ -68,7 +62,7 @@ CS-2550-001-002-Spring
     }
     & img {
       width: 175px;
-      margin: 0px 50px 0px 50px;
+      margin: auto;
     }
     
  }
@@ -83,20 +77,24 @@ CS-2550-001-002-Spring
        flex-direction: column;
        padding: 0px;
        text-align: center;
-       border-right: 2px solid black;
+       border-right: 2px dashed white;
        align-items: center;
     }
     & input {
-       width: 100px;
-       height: 30px;
+        background-color: $pokeball-tc;
+        color: $pokeball-bc;
     }
+    & input {
+        width: 100px;
+        height: 30px;
+     }
     & img {
        width: 150px;
-       padding-top: 30px;
+       margin: auto;
     }
  }
  main {
-    background-color: $pokeball-bc;
+    background-color: $bg-color;
     margin: 0;
     padding: 5px 20px;
     max-width: 875px;
@@ -120,7 +118,7 @@ CS-2550-001-002-Spring
             border: none;
             margin-bottom: 5px;
             margin-right: 8px;
-            background-color: $pokeball-bc;
+            background-color: whitesmoke;
             border-radius: 10px;
             transition-duration: 0.1s;
             font-weight: bold;
@@ -130,7 +128,7 @@ CS-2550-001-002-Spring
             &#bug {
                border: 2px solid #B0BE20;
                &:hover {
-                  border-color: black;
+                  border-color: $font-color;
                }
                &:active {
                   transform: scale(.95, .95) ;
@@ -139,7 +137,7 @@ CS-2550-001-002-Spring
             &#dark {
                border: 2px solid #7E624C;
                &:hover {
-                  border-color: black;
+                  border-color: $font-color;
                }
                &:active {
                   transform: scale(.95, .95) ;
@@ -148,7 +146,7 @@ CS-2550-001-002-Spring
             &#dragon {
                border: 2px solid #7B69F3;
                &:hover {
-                  border-color: black;
+                  border-color: $font-color;
                }
                &:active {
                   transform: scale(.95, .95) ;
@@ -157,7 +155,7 @@ CS-2550-001-002-Spring
             &#electric {
                border: 2px solid #FAD03C;
                &:hover {
-                  border-color: black;
+                  border-color: $font-color;
                }
                &:active {
                   transform: scale(.95, .95) ;
@@ -166,7 +164,7 @@ CS-2550-001-002-Spring
             &#fairy {
                border: 2px solid #e19de8;
                &:hover {
-                  border-color: black;
+                  border-color: $font-color;
                }
                &:active {
                   transform: scale(.95, .95) ;
@@ -175,7 +173,7 @@ CS-2550-001-002-Spring
             &#fighting {
                border: 2px solid #AF5c4A;
                &:hover {
-                  border-color: black;
+                  border-color: $font-color;
                }
                &:active {
                   transform: scale(.95, .95) ;
@@ -184,7 +182,7 @@ CS-2550-001-002-Spring
             &#fire {
                border: 2px solid #E54C3C;
                &:hover {
-                  border-color: black;
+                  border-color: $font-color;
                }
                &:active {
                   transform: scale(.95, .95) ;
@@ -193,7 +191,7 @@ CS-2550-001-002-Spring
             &#flying {
                border: 2px solid #6896f4;
                &:hover {
-                  border-color: black;
+                  border-color: $font-color;
                }
                &:active {
                   transform: scale(.95, .95) ;
@@ -202,7 +200,7 @@ CS-2550-001-002-Spring
             &#ghost {
                border: 2px solid #6c6cc4;
                &:hover {
-                  border-color: black;
+                  border-color: $font-color;
                }
                &:active {
                   transform: scale(.95, .95) ;
@@ -211,7 +209,7 @@ CS-2550-001-002-Spring
             &#grass {
                border: 2px solid #80c747;
                &:hover {
-                  border-color: black;
+                  border-color: $font-color;
                }
                &:active {
                   transform: scale(.95, .95) ;
@@ -220,7 +218,7 @@ CS-2550-001-002-Spring
             &#ground {
                border: 2px solid #d8bb43;
                &:hover {
-                  border-color: black;
+                  border-color: $font-color;
                }
                &:active {
                   transform: scale(.95, .95) ;
@@ -229,7 +227,7 @@ CS-2550-001-002-Spring
             &#ice {
                border: 2px solid #87dbfd;
                &:hover {
-                  border-color: black;
+                  border-color: $font-color;
                }
                &:active {
                   transform: scale(.95, .95) ;
@@ -238,7 +236,7 @@ CS-2550-001-002-Spring
             &#normal {
                border: 2px solid #aeb39f;
                &:hover {
-                  border-color: black;
+                  border-color: $font-color;
                }
                &:active {
                   transform: scale(.95, .95) ;
@@ -247,7 +245,7 @@ CS-2550-001-002-Spring
             &#poison {
                border: 2px solid #a65a98;
                &:hover {
-                  border-color: black;
+                  border-color: $font-color;
                }
                &:active {
                   transform: scale(.95, .95) ;
@@ -256,7 +254,7 @@ CS-2550-001-002-Spring
             &#psychic {
                border: 2px solid #e85aa6;
                &:hover {
-                  border-color: black;
+                  border-color: $font-color;
                }
                &:active {
                   transform: scale(.95, .95) ;
@@ -265,7 +263,7 @@ CS-2550-001-002-Spring
             &#rock {
                border: 2px solid #baac65;
                &:hover {
-                  border-color: black;
+                  border-color: $font-color;
                }
                &:active {
                   transform: scale(.95, .95) ;
@@ -274,7 +272,7 @@ CS-2550-001-002-Spring
             &#steel {
                border: 2px solid #b0b1c6;
                &:hover {
-                  border-color: black;
+                  border-color: $font-color;
                }
                &:active {
                   transform: scale(.95, .95) ;
@@ -283,7 +281,7 @@ CS-2550-001-002-Spring
             &#water {
                border: 2px solid #4ba0fd;
                &:hover {
-                  border-color: black;
+                  border-color: $font-color;
                }
                &:active {
                   transform: scale(.95, .95) ;
@@ -294,17 +292,19 @@ CS-2550-001-002-Spring
  }
 
  footer {
-    border-top: 2px solid black;
+    border-top: 2px dashed white;
     text-align: center;
     font-size: 10pt;
+    background-color: $pokeball-bc;
+    color: $bc-color;
     &.grid-item {
        grid-row: 3;
        grid-column: 1;
-       grid-column-end: 3;
+       grid-column-end: 4;
     }
     & p a {
-       margin: 0px 50px 0px 50px;
-    }
+        margin: 0px 50px 0px 50px;
+     }
  }
  
  a {
@@ -322,5 +322,4 @@ CS-2550-001-002-Spring
       color: $pokeball-tc;
    } 
  }
- 
  

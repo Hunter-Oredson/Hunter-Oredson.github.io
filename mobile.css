@@ -2,42 +2,23 @@
 CS-2550-001-002-Spring 
 2/19/20 
 */
-@media all and (max-width: 700px) {
-  header h1 img {
-    display: none;
-  }
-}
-
-@media all and (max-width: 960px) {
-  header h1 img {
-    width: 145px;
-  }
-}
-
-@media all and (max-width: 900px) {
-  header h1 img {
-    width: 100px;
-    margin: 0px 10px 0px 10px;
-  }
-}
-
 :root {
-  max-width: 1080px;
+  width: auto;
   background-color: khaki;
-  margin: auto;
+  margin: none;
 }
 
 body {
-  background-color: white;
-  font-family: Helvetica, sans-serif;
+  background-color: #FFFFFF;
+  font-family: Arial, sans-serif;
 }
 
 body.grid-container {
   color: #595959;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 150px auto auto;
-      grid-template-columns: 150px auto auto;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
   -ms-grid-rows: auto auto auto;
       grid-template-rows: auto auto auto;
 }
@@ -71,55 +52,47 @@ header h1 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  font-size: 50pt;
 }
 
 header img {
-  width: 175px;
-  margin: 0px 50px 0px 50px;
+  display: none;
 }
 
-menu {
-  -webkit-margin-before: 0em;
-          margin-block-start: 0em;
-  -webkit-margin-after: 0em;
-          margin-block-end: 0em;
+header p {
+  font-size: 35pt;
 }
 
-menu.grid-item {
-  -ms-grid-column: 1;
-  grid-column: 1;
-  grid-column-end: 2;
-  background-color: #CAEBF2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 0px;
-  text-align: center;
-  border-right: 2px solid black;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-menu input {
-  width: 100px;
-  height: 30px;
-}
-
-menu img {
-  width: 150px;
-  padding-top: 30px;
+header p select {
+  height: 50px;
 }
 
 main {
   background-color: #FFFFFF;
   margin: 0;
   padding: 5px 20px;
-  max-width: 875px;
+  width: auto;
+  font-size: 25pt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main input {
+  height: 100px;
+  width: 215px;
+  border-radius: 20px;
+  font-size: 20pt;
+  font-weight: bold;
 }
 
 main h1 {
@@ -129,9 +102,10 @@ main h1 {
 
 main.grid-item {
   -ms-grid-row: 2;
-  grid-row: 2;
-  -ms-grid-column: 2;
-  grid-column: 2;
+      grid-row-start: 2;
+  grid-row-end: 5;
+  -ms-grid-column: 1;
+  grid-column: 1;
 }
 
 main div h3 {
@@ -156,20 +130,24 @@ main div#types {
 
 main div#types button {
   border: none;
-  margin-bottom: 5px;
-  margin-right: 8px;
+  margin-bottom: 10px;
+  margin-right: 16px;
   background-color: #FFFFFF;
-  border-radius: 10px;
+  border-radius: 20px;
   -webkit-transition-duration: 0.1s;
           transition-duration: 0.1s;
   font-weight: bold;
-  font-size: 14pt;
-  height: 80px;
-  width: 145px;
+  font-size: 20pt;
+  height: 160px;
+  width: 290px;
 }
 
 main div#types button#bug {
   border: 2px solid #B0BE20;
+}
+
+main div#types button#bug img {
+  width: 250px;
 }
 
 main div#types button#bug:hover {
@@ -185,6 +163,10 @@ main div#types button#dark {
   border: 2px solid #7E624C;
 }
 
+main div#types button#dark img {
+  width: 250px;
+}
+
 main div#types button#dark:hover {
   border-color: black;
 }
@@ -196,6 +178,10 @@ main div#types button#dark:active {
 
 main div#types button#dragon {
   border: 2px solid #7B69F3;
+}
+
+main div#types button#dragon img {
+  width: 250px;
 }
 
 main div#types button#dragon:hover {
@@ -211,6 +197,10 @@ main div#types button#electric {
   border: 2px solid #FAD03C;
 }
 
+main div#types button#electric img {
+  width: 250px;
+}
+
 main div#types button#electric:hover {
   border-color: black;
 }
@@ -222,6 +212,10 @@ main div#types button#electric:active {
 
 main div#types button#fairy {
   border: 2px solid #e19de8;
+}
+
+main div#types button#fairy img {
+  width: 250px;
 }
 
 main div#types button#fairy:hover {
@@ -237,6 +231,10 @@ main div#types button#fighting {
   border: 2px solid #AF5c4A;
 }
 
+main div#types button#fighting img {
+  width: 250px;
+}
+
 main div#types button#fighting:hover {
   border-color: black;
 }
@@ -248,6 +246,10 @@ main div#types button#fighting:active {
 
 main div#types button#fire {
   border: 2px solid #E54C3C;
+}
+
+main div#types button#fire img {
+  width: 250px;
 }
 
 main div#types button#fire:hover {
@@ -263,6 +265,10 @@ main div#types button#flying {
   border: 2px solid #6896f4;
 }
 
+main div#types button#flying img {
+  width: 250px;
+}
+
 main div#types button#flying:hover {
   border-color: black;
 }
@@ -274,6 +280,10 @@ main div#types button#flying:active {
 
 main div#types button#ghost {
   border: 2px solid #6c6cc4;
+}
+
+main div#types button#ghost img {
+  width: 250px;
 }
 
 main div#types button#ghost:hover {
@@ -289,6 +299,10 @@ main div#types button#grass {
   border: 2px solid #80c747;
 }
 
+main div#types button#grass img {
+  width: 250px;
+}
+
 main div#types button#grass:hover {
   border-color: black;
 }
@@ -300,6 +314,10 @@ main div#types button#grass:active {
 
 main div#types button#ground {
   border: 2px solid #d8bb43;
+}
+
+main div#types button#ground img {
+  width: 250px;
 }
 
 main div#types button#ground:hover {
@@ -315,6 +333,10 @@ main div#types button#ice {
   border: 2px solid #87dbfd;
 }
 
+main div#types button#ice img {
+  width: 250px;
+}
+
 main div#types button#ice:hover {
   border-color: black;
 }
@@ -326,6 +348,10 @@ main div#types button#ice:active {
 
 main div#types button#normal {
   border: 2px solid #aeb39f;
+}
+
+main div#types button#normal img {
+  width: 250px;
 }
 
 main div#types button#normal:hover {
@@ -341,6 +367,10 @@ main div#types button#poison {
   border: 2px solid #a65a98;
 }
 
+main div#types button#poison img {
+  width: 250px;
+}
+
 main div#types button#poison:hover {
   border-color: black;
 }
@@ -352,6 +382,10 @@ main div#types button#poison:active {
 
 main div#types button#psychic {
   border: 2px solid #e85aa6;
+}
+
+main div#types button#psychic img {
+  width: 250px;
 }
 
 main div#types button#psychic:hover {
@@ -367,6 +401,10 @@ main div#types button#rock {
   border: 2px solid #baac65;
 }
 
+main div#types button#rock img {
+  width: 250px;
+}
+
 main div#types button#rock:hover {
   border-color: black;
 }
@@ -378,6 +416,10 @@ main div#types button#rock:active {
 
 main div#types button#steel {
   border: 2px solid #b0b1c6;
+}
+
+main div#types button#steel img {
+  width: 250px;
 }
 
 main div#types button#steel:hover {
@@ -393,6 +435,10 @@ main div#types button#water {
   border: 2px solid #4ba0fd;
 }
 
+main div#types button#water img {
+  width: 250px;
+}
+
 main div#types button#water:hover {
   border-color: black;
 }
@@ -405,15 +451,14 @@ main div#types button#water:active {
 footer {
   border-top: 2px solid black;
   text-align: center;
-  font-size: 10pt;
+  font-size: 18pt;
 }
 
 footer.grid-item {
-  -ms-grid-row: 3;
-  grid-row: 3;
+  -ms-grid-row: 6;
+  grid-row: 6;
   -ms-grid-column: 1;
   grid-column: 1;
-  grid-column-end: 3;
 }
 
 footer p a {
@@ -425,7 +470,7 @@ a {
 }
 
 a:link {
-  color: #595959;
+  color: #EF2B2F;
 }
 
 a:visited {
@@ -439,4 +484,4 @@ a:hover {
 a:active {
   color: #EF2B2F;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=mobile.css.map */

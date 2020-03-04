@@ -1,0 +1,352 @@
+/*Hunter Oredson
+CS-2550-001-002-Spring 
+2/19/20 
+*/
+
+$pokeball-bc: #FFFFFF;
+$pokeball-tc: #EF2B2F;
+$font-color: #595959;
+$bg-color: #CAEBF2;
+
+:root {
+width: auto;
+background-color: khaki;
+margin: none;
+}
+
+body {
+background-color: $pokeball-bc;
+font-family: Arial, sans-serif;
+&.grid-container {
+  color: $font-color;
+display: grid;
+grid-template-columns: auto;
+grid-template-rows: auto auto auto;
+}
+}
+
+header {
+background-color: $pokeball-tc;
+border-bottom: 2px solid black;
+text-align: center;
+color: black;
+//height: 225px;
+&.grid-item {
+   grid-row: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+& h1 {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 50pt;
+}
+& img {
+  display: none;
+}
+& p {
+   font-size: 35pt;
+   & select {
+      height: 50px;
+      
+   }
+}
+}
+
+main {
+background-color: $pokeball-bc;
+margin: 0;
+padding: 5px 20px;
+width: auto;
+font-size: 25pt;
+display: flex;
+flex-flow: row wrap;
+align-items: center;
+justify-content: space-around;
+
+& input {
+   height: 100px;
+   width: 215px;
+   border-radius: 20px;
+   font-size: 20pt;
+   font-weight: bold;
+}
+& h1 {
+   text-align: center;
+   text-decoration: underline;
+}
+&.grid-item {
+   grid-row-start: 2;
+   grid-row-end: 5;
+   grid-column: 1;
+}
+& div h3 {
+   text-align: center;
+}
+& div#types {
+     display: flex;
+     flex-flow: row wrap;
+     align-items: center;
+     justify-content: space-evenly;
+     & button {
+        border: none;
+        margin-bottom: 10px;
+        margin-right: 16px;
+        background-color: $pokeball-bc;
+        border-radius: 20px;
+        transition-duration: 0.1s;
+        font-weight: bold;
+        font-size: 20pt;
+        height: 160px;
+        width: 290px;
+        &#bug {
+           border: 2px solid #B0BE20;
+           & img {
+              width: 250px;
+           }
+           &:hover {
+              border-color: black;
+           }
+           &:active {
+              transform: scale(.95, .95) ;
+           }
+        }
+        &#dark {
+           border: 2px solid #7E624C;
+           & img {
+            width: 250px;
+         }
+           &:hover {
+              border-color: black;
+           }
+           &:active {
+              transform: scale(.95, .95) ;
+           }
+        }
+        &#dragon {
+           border: 2px solid #7B69F3;
+           & img {
+            width: 250px;
+         }
+           &:hover {
+              border-color: black;
+           }
+           &:active {
+              transform: scale(.95, .95) ;
+           }
+        }
+        &#electric {
+           border: 2px solid #FAD03C;
+           & img {
+            width: 250px;
+         }
+           &:hover {
+              border-color: black;
+           }
+           &:active {
+              transform: scale(.95, .95) ;
+           }
+        }
+        &#fairy {
+           border: 2px solid #e19de8;
+           & img {
+            width: 250px;
+         }
+           &:hover {
+              border-color: black;
+           }
+           &:active {
+              transform: scale(.95, .95) ;
+           }
+        }
+        &#fighting {
+           border: 2px solid #AF5c4A;
+           & img {
+            width: 250px;
+         }
+           &:hover {
+              border-color: black;
+           }
+           &:active {
+              transform: scale(.95, .95) ;
+           }
+        }
+        &#fire {
+           border: 2px solid #E54C3C;
+           & img {
+            width: 250px;
+         }
+           &:hover {
+              border-color: black;
+           }
+           &:active {
+              transform: scale(.95, .95) ;
+           }
+        }
+        &#flying {
+           border: 2px solid #6896f4;
+           & img {
+            width: 250px;
+         }
+           &:hover {
+              border-color: black;
+           }
+           &:active {
+              transform: scale(.95, .95) ;
+           }
+        }
+        &#ghost {
+           border: 2px solid #6c6cc4;
+           & img {
+            width: 250px;
+         }
+           &:hover {
+              border-color: black;
+           }
+           &:active {
+              transform: scale(.95, .95) ;
+           }
+        }
+        &#grass {
+           border: 2px solid #80c747;
+           & img {
+            width: 250px;
+         }
+           &:hover {
+              border-color: black;
+           }
+           &:active {
+              transform: scale(.95, .95) ;
+           }
+        }
+        &#ground {
+           border: 2px solid #d8bb43;
+           & img {
+            width: 250px;
+         }
+           &:hover {
+              border-color: black;
+           }
+           &:active {
+              transform: scale(.95, .95) ;
+           }
+        }
+        &#ice {
+           border: 2px solid #87dbfd;
+           & img {
+            width: 250px;
+         }
+           &:hover {
+              border-color: black;
+           }
+           &:active {
+              transform: scale(.95, .95) ;
+           }
+        }
+        &#normal {
+           border: 2px solid #aeb39f;
+           & img {
+            width: 250px;
+         }
+           &:hover {
+              border-color: black;
+           }
+           &:active {
+              transform: scale(.95, .95) ;
+           }
+        }
+        &#poison {
+           border: 2px solid #a65a98;
+           & img {
+            width: 250px;
+         }
+           &:hover {
+              border-color: black;
+           }
+           &:active {
+              transform: scale(.95, .95) ;
+           }
+        }
+        &#psychic {
+           border: 2px solid #e85aa6;
+           & img {
+            width: 250px;
+         }
+           &:hover {
+              border-color: black;
+           }
+           &:active {
+              transform: scale(.95, .95) ;
+           }
+        }
+        &#rock {
+           border: 2px solid #baac65;
+           & img {
+            width: 250px;
+         }
+           &:hover {
+              border-color: black;
+           }
+           &:active {
+              transform: scale(.95, .95) ;
+           }
+        }
+        &#steel {
+           border: 2px solid #b0b1c6;
+           & img {
+            width: 250px;
+         }
+           &:hover {
+              border-color: black;
+           }
+           &:active {
+              transform: scale(.95, .95) ;
+           }
+        }
+        &#water {
+           border: 2px solid #4ba0fd;
+           & img {
+            width: 250px;
+         }
+           &:hover {
+              border-color: black;
+           }
+           &:active {
+              transform: scale(.95, .95) ;
+           }
+        }
+     }
+}
+}
+
+footer {
+border-top: 2px solid black;
+text-align: center;
+font-size: 18pt;
+&.grid-item {
+   grid-row: 6;
+   grid-column: 1;
+}
+& p a {
+   margin: 0px 50px 0px 50px;
+}
+}
+
+a {
+   text-decoration: underline;
+&:link {
+  color: $pokeball-tc; 
+}   
+&:visited {
+  color: $font-color;  
+} 
+&:hover {
+  color: $pokeball-tc;
+}  
+&:active {
+  color: $pokeball-tc;
+} 
+}
+
